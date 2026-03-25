@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RescueLink Profile</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Manrope & Inter -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed": "#c8ebd5",
+              "on-tertiary": "#ffffff",
+              "on-error": "#ffffff",
+              "on-background": "#181d1b",
+              "primary": "#163426",
+              "secondary-container": "#c2e9c9",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-low": "#f1f5f2",
+              "on-secondary-fixed": "#00210e",
+              "inverse-on-surface": "#eef2ef",
+              "on-primary-container": "#99baa6",
+              "primary-fixed-dim": "#adceb9",
+              "tertiary-fixed-dim": "#ffb3ac",
+              "surface-container": "#ebefec",
+              "on-secondary-container": "#486a51",
+              "on-tertiary-container": "#ff958c",
+              "tertiary": "#650007",
+              "surface": "#f6faf7",
+              "background": "#f6faf7",
+              "on-error-container": "#93000a",
+              "outline": "#727973",
+              "secondary": "#43664d",
+              "surface-container-high": "#e5e9e6",
+              "tertiary-container": "#8f000f",
+              "secondary-fixed": "#c5eccc",
+              "error-container": "#ffdad6",
+              "on-tertiary-fixed-variant": "#930010",
+              "on-surface-variant": "#424844",
+              "surface-dim": "#d7dbd8",
+              "on-primary-fixed-variant": "#2f4d3d",
+              "on-secondary-fixed-variant": "#2c4e36",
+              "inverse-primary": "#adceb9",
+              "on-primary-fixed": "#022113",
+              "secondary-fixed-dim": "#aad0b1",
+              "on-tertiary-fixed": "#410003",
+              "inverse-surface": "#2d3130",
+              "tertiary-fixed": "#ffdad6",
+              "on-surface": "#181d1b",
+              "surface-bright": "#f6faf7",
+              "outline-variant": "#c2c8c2",
+              "primary-container": "#2d4b3b",
+              "surface-variant": "#dfe3e1",
+              "on-secondary": "#ffffff",
+              "on-primary": "#ffffff",
+              "surface-tint": "#466554",
+              "surface-container-highest": "#dfe3e1",
+              "error": "#ba1a1a"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f6faf7;
+        }
+        .headline-font { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen pb-12">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex items-center justify-between px-6 py-4 bg-white/90 dark:bg-emerald-950/90 backdrop-blur-md border-b border-emerald-100/20">
+<div class="flex items-center justify-start gap-2">
+<button class="p-2 -ml-2 rounded-full hover:bg-emerald-100/50 dark:hover:bg-emerald-900/50 active:scale-90 transition-all">
+<span class="material-symbols-outlined text-emerald-900 dark:text-emerald-100" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-['Manrope'] font-extrabold tracking-tighter text-emerald-900 dark:text-emerald-50 text-lg uppercase">RescueLink</h1></div>
+<div class="flex items-center justify-end">
+<div class="flex items-center gap-2 px-3 py-1 bg-primary text-on-primary rounded-full shadow-sm">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary-container opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary-container"></span>
+</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Mesh Active</span>
+</div>
+</div>
+</header>
+<main class="pt-24 px-4 md:px-8 max-w-4xl mx-auto space-y-8">
+<!-- Profile Header Section (Bento Style) -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Identity Card -->
+<div class="md:col-span-2 bg-surface-container-lowest rounded-[2rem] p-8 relative overflow-hidden flex flex-col items-center md:items-start text-center md:text-left">
+<div class="relative mb-6">
+<div class="w-32 h-32 rounded-full border-4 border-primary-fixed overflow-hidden">
+<img alt="User Avatar" class="w-full h-full object-cover" data-alt="Close-up portrait of a middle-aged man with a friendly expression, soft outdoor natural lighting, high-end photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_WkboS-QXiUrUK5pRyWWXc5KgM6_Jy-KKO4jdHdNU2Jq63Uc5nTXRP4Nabbtbd4yHllJfR-dZgkgxwh5EXCvSOzyBdXX6lC56Wika3lIjmlnFUYr9XeSQQOBEN6beErAwc4vEI_xUlnq0aboSLtA1Kitd_mmIYeiWvaLhOzn87kI7ozg7cbQiKEv_-JQj_CYfcstyVSxMqPkNoCZ0cGv8AFv_xnvzJ-PWafNQ60763S9euAf4Cyggv1XcfCag04a6__ZzWnAOoA"/>
+</div>
+<div class="absolute bottom-1 right-1 bg-primary text-on-primary w-8 h-8 rounded-full flex items-center justify-center border-2 border-surface-container-lowest">
+<span class="material-symbols-outlined text-[16px]" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<h2 class="headline-font text-3xl font-extrabold text-primary mb-1">Marcus Thorne</h2>
+<p class="text-on-surface-variant font-medium mb-6">Rescue Specialist • Senior Responder</p>
+<div class="flex flex-wrap gap-3 justify-center md:justify-start">
+<div class="px-4 py-2 bg-surface-container-high rounded-full flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-secondary" data-icon="fingerprint">fingerprint</span>
+<span class="text-xs font-bold tracking-tight text-on-surface">ID: RL-8829-QX</span>
+</div>
+<div class="px-4 py-2 bg-secondary-container rounded-full flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-secondary" data-icon="cake">cake</span>
+<span class="text-xs font-bold tracking-tight text-on-surface">34 Years</span>
+</div>
+</div>
+</div>
+<!-- Blood Group & Emergency Status -->
+<div class="bg-primary text-on-primary rounded-[2rem] p-8 flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-on-primary-container opacity-10 rounded-full"></div>
+<div>
+<span class="text-xs uppercase tracking-widest font-bold opacity-70">Blood Group</span>
+<div class="text-7xl headline-font font-extrabold mt-2">O+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-white/10">
+<span class="text-xs uppercase tracking-widest font-bold opacity-70">Status</span>
+<div class="flex items-center gap-2 mt-2">
+<div class="w-3 h-3 bg-secondary-container rounded-full animate-pulse"></div>
+<span class="font-bold">Active Responder</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Emergency Note & Visibility (Asymmetric Layout) -->
+<section class="grid grid-cols-1 md:grid-cols-5 gap-6">
+<!-- Emergency Note Card -->
+<div class="md:col-span-3 bg-surface-container-low rounded-[2rem] p-8">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary" data-icon="medical_information">medical_information</span>
+<h3 class="headline-font text-xl font-bold">Emergency Medical Note</h3>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-2xl">
+<p class="text-on-surface-variant leading-relaxed italic">
+                        "Severe allergy to Penicillin. Carries EpiPen in left pocket of tactical gear. Contact Dr. Aris Thorne (+1 555-0199) immediately if found unconscious in mountainous terrain."
+                    </p>
+</div>
+<button class="mt-6 flex items-center gap-2 text-primary font-bold text-sm hover:underline">
+<span class="material-symbols-outlined text-sm" data-icon="edit">edit</span>
+                    Update Medical History
+                </button>
+</div>
+<!-- Visibility Toggle -->
+<div class="md:col-span-2 bg-surface-container-highest rounded-[2rem] p-8 flex flex-col justify-between">
+<div>
+<h3 class="headline-font text-xl font-bold mb-2">Profile Visibility</h3>
+<p class="text-sm text-on-surface-variant leading-snug">Control who can see your medical and identity details during non-emergency periods.</p>
+</div>
+<div class="space-y-3 mt-8">
+<label class="flex items-center justify-between p-4 bg-surface-container-lowest rounded-2xl cursor-pointer hover:bg-white transition-colors">
+<span class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="public">public</span>
+<span class="font-bold text-sm">Public</span>
+</span>
+<input class="text-primary focus:ring-primary h-5 w-5 border-outline-variant" name="visibility" type="radio"/>
+</label>
+<label class="flex items-center justify-between p-4 bg-primary-fixed rounded-2xl cursor-pointer">
+<span class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="visibility_lock">visibility_lock</span>
+<span class="font-bold text-sm">Limited Access</span>
+</span>
+<input checked="" class="text-primary focus:ring-primary h-5 w-5 border-outline-variant" name="visibility" type="radio"/>
+</label>
+<label class="flex items-center justify-between p-4 bg-surface-container-lowest rounded-2xl cursor-pointer hover:bg-white transition-colors">
+<span class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="visibility_off">visibility_off</span>
+<span class="font-bold text-sm">Hidden</span>
+</span>
+<input class="text-primary focus:ring-primary h-5 w-5 border-outline-variant" name="visibility" type="radio"/>
+</label>
+</div>
+</div>
+</section>
+<!-- Quick Actions List -->
+<section class="bg-surface-container-lowest rounded-[2rem] p-4">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between p-6 rounded-2xl hover:bg-surface-container-low transition-colors group cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</div>
+<div>
+<h4 class="font-bold">Account Settings</h4>
+<p class="text-xs text-on-surface-variant">Manage authentication and global preferences</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</div>
+<div class="flex items-center justify-between p-6 rounded-2xl hover:bg-surface-container-low transition-colors group cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+</div>
+<div>
+<h4 class="font-bold">Incident Log</h4>
+<p class="text-xs text-on-surface-variant">Review past distress signals and responses</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</div>
+<div class="flex items-center justify-between p-6 rounded-2xl hover:bg-surface-container-low transition-colors group cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="security">security</span>
+</div>
+<div>
+<h4 class="font-bold">Privacy &amp; Security</h4>
+<p class="text-xs text-on-surface-variant">Mesh encryption keys and data permissions</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</section>
+<!-- Log Out CTA -->
+<button class="w-full py-6 rounded-3xl bg-surface-container-high text-on-surface font-bold headline-font flex items-center justify-center gap-3 active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined text-tertiary" data-icon="logout">logout</span>
+            Logout from RescueLink
+        </button>
+</main>
+</body></html>

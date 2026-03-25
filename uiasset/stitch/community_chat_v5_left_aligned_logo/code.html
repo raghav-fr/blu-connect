@@ -1,0 +1,253 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>RescueLink Community Chat</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed": "#c8ebd5",
+              "on-tertiary": "#ffffff",
+              "on-error": "#ffffff",
+              "on-background": "#181d1b",
+              "primary": "#163426",
+              "secondary-container": "#c2e9c9",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-low": "#f1f5f2",
+              "on-secondary-fixed": "#00210e",
+              "inverse-on-surface": "#eef2ef",
+              "on-primary-container": "#99baa6",
+              "primary-fixed-dim": "#adceb9",
+              "tertiary-fixed-dim": "#ffb3ac",
+              "surface-container": "#ebefec",
+              "on-secondary-container": "#486a51",
+              "on-tertiary-container": "#ff958c",
+              "tertiary": "#650007",
+              "surface": "#f6faf7",
+              "background": "#f6faf7",
+              "on-error-container": "#93000a",
+              "outline": "#727973",
+              "secondary": "#43664d",
+              "surface-container-high": "#e5e9e6",
+              "tertiary-container": "#8f000f",
+              "secondary-fixed": "#c5eccc",
+              "error-container": "#ffdad6",
+              "on-tertiary-fixed-variant": "#930010",
+              "on-surface-variant": "#424844",
+              "surface-dim": "#d7dbd8",
+              "on-primary-fixed-variant": "#2f4d3d",
+              "on-secondary-fixed-variant": "#2c4e36",
+              "inverse-primary": "#adceb9",
+              "on-primary-fixed": "#022113",
+              "secondary-fixed-dim": "#aad0b1",
+              "on-tertiary-fixed": "#410003",
+              "inverse-surface": "#2d3130",
+              "tertiary-fixed": "#ffdad6",
+              "on-surface": "#181d1b",
+              "surface-bright": "#f6faf7",
+              "outline-variant": "#c2c8c2",
+              "primary-container": "#2d4b3b",
+              "surface-variant": "#dfe3e1",
+              "on-secondary": "#ffffff",
+              "on-primary": "#ffffff",
+              "surface-tint": "#466554",
+              "surface-container-highest": "#dfe3e1",
+              "error": "#ba1a1a"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-panel {
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(12px);
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f6faf7;
+      }
+      h1, h2, h3 {
+        font-family: 'Manrope', sans-serif;
+      }
+      body {
+        min-height: max(884px, 100dvh);
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+</head>
+<body class="text-on-background selection:bg-primary-fixed">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl border-b border-outline-variant/30 px-4 h-16 flex items-center justify-between">
+<div class="flex items-center flex-grow">
+<button class="material-symbols-outlined text-on-surface p-2 hover:bg-surface-container-high rounded-full transition-colors active:scale-95" data-icon="arrow_back" style="">
+      arrow_back
+    </button><span class="font-['Manrope'] font-extrabold text-xl tracking-tighter text-primary ml-2" style="">RescueLink</span>
+</div>
+<div class="absolute left-1/2 -translate-x-1/2 flex items-center gap-2">
+<span class="font-['Manrope'] font-extrabold text-xl tracking-tighter text-primary" style=""><br></span>
+</div>
+<div class="flex items-center justify-end gap-3">
+<div class="flex items-center gap-2 bg-primary/10 px-3 py-1.5 rounded-full">
+<div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
+<span class="text-[10px] font-bold uppercase tracking-wider text-primary" style="">Mesh Active</span>
+<span class="material-symbols-outlined text-sm text-primary" data-icon="sensors" style="">sensors</span>
+</div>
+</div>
+</header>
+<main class="pt-20 pb-40 px-4 max-w-5xl mx-auto min-h-screen mt-4">
+<!-- Community Hub Header -->
+<div class="mb-8 flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<span class="text-primary font-bold tracking-widest text-[10px] uppercase block mb-1" style="">Active Mesh Network</span>
+<h1 class="text-3xl font-extrabold tracking-tight text-primary" style="">Community Broadcast</h1>
+<p class="text-on-surface-variant text-sm mt-1 max-w-md" style="">Real-time local communication via decentralized peer-to-peer nodes.</p>
+</div>
+<!-- Network Status Chip -->
+<div class="flex items-center gap-2 bg-surface-container-lowest px-4 py-2 rounded-full shadow-sm">
+<div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
+<span class="text-xs font-semibold text-primary" style="">12 Nodes Active</span>
+<span class="text-xs text-outline-variant" style="">|</span>
+<span class="text-xs font-medium text-on-surface-variant" style="">Luzon Region</span>
+</div>
+</div>
+<!-- Chat Feed -->
+<div class="space-y-6">
+<!-- SOS Message (Priority Tertiary) -->
+<div class="flex flex-col items-start max-w-[85%]">
+<div class="flex items-center gap-2 mb-1 ml-4">
+<span class="text-[10px] font-bold text-tertiary uppercase tracking-tighter bg-tertiary-fixed px-1.5 py-0.5 rounded" style="">SOS</span>
+<span class="text-[10px] font-medium text-on-surface-variant" style="">Maria Santos • 2m ago</span>
+</div>
+<div class="bg-tertiary text-on-tertiary p-4 rounded-2xl rounded-tl-none shadow-lg">
+<p class="text-sm font-medium leading-relaxed" style="">Flood levels rising at Sector 4 bridge. Immediate assistance needed for elderly evacuation. We are at the Community Center roof.</p>
+<div class="mt-3 pt-3 border-t border-white/10 flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm" data-icon="hub" style="">hub</span>
+<span class="text-[10px] font-medium opacity-80 uppercase tracking-wide" style="">Relayed via 5 nodes</span>
+</div>
+<span class="material-symbols-outlined text-sm" data-icon="location_on" style="">location_on</span>
+</div>
+</div>
+</div>
+<!-- Alert Message (Priority Orange/Secondary) -->
+<div class="flex flex-col items-start max-w-[85%]">
+<div class="flex items-center gap-2 mb-1 ml-4">
+<span class="text-[10px] font-bold text-amber-900 uppercase tracking-tighter bg-amber-200 px-1.5 py-0.5 rounded" style="">Alert</span>
+<span class="text-[10px] font-medium text-on-surface-variant" style="">System Hub • 15m ago</span>
+</div>
+<div class="bg-surface-container-highest border-l-4 border-amber-400 p-4 rounded-2xl rounded-tl-none">
+<p class="text-sm text-on-surface leading-relaxed" style="">Grid power expected to remain offline for the next 48 hours. Please conserve battery on all mesh devices.</p>
+<div class="mt-3 flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm" data-icon="hub" style="">hub</span>
+<span class="text-[10px] font-medium uppercase tracking-wide" style="">Direct Broadcast</span>
+</div>
+</div>
+</div>
+<!-- Standard Message (Info) -->
+<div class="flex flex-col items-start max-w-[85%]">
+<div class="flex items-center gap-2 mb-1 ml-4">
+<span class="text-[10px] font-bold text-secondary uppercase tracking-tighter bg-secondary-fixed px-1.5 py-0.5 rounded" style="">Info</span>
+<span class="text-[10px] font-medium text-on-surface-variant" style="">David K. • 45m ago</span>
+</div>
+<div class="bg-primary-fixed text-on-primary-fixed p-4 rounded-2xl rounded-tl-none">
+<p class="text-sm leading-relaxed" style="">Clean water distribution starting at the Plaza. Bring your own containers. Maximum 10L per family.</p>
+<div class="mt-3 flex items-center gap-1.5 opacity-70">
+<span class="material-symbols-outlined text-sm" data-icon="hub" style="">hub</span>
+<span class="text-[10px] font-medium uppercase tracking-wide" style="">Relayed via 2 nodes</span>
+</div>
+</div>
+</div>
+<!-- User Response (Soft Green Bubble) -->
+<div class="flex flex-col items-end max-w-[85%] ml-auto">
+<div class="flex items-center gap-2 mb-1 mr-4">
+<span class="text-[10px] font-medium text-on-surface-variant" style="">You • Just now</span>
+</div>
+<div class="bg-primary text-on-primary p-4 rounded-2xl rounded-tr-none shadow-sm">
+<p class="text-sm leading-relaxed" style="">Copy that. Bringing 4 empty gallons to the Plaza now. Can anyone relay if they need extra containers?</p>
+<div class="mt-2 flex items-center justify-end gap-1 opacity-60">
+<span class="text-[10px] uppercase font-bold tracking-widest" style="">Broadcasting...</span>
+<span class="material-symbols-outlined text-[10px]" data-icon="wifi_tethering" style="">wifi_tethering</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Input Area - Positioned towards bottom without nav bar overlapping -->
+<div class="fixed bottom-8 left-0 w-full px-4 z-40">
+<div class="max-w-5xl mx-auto bg-surface-container-lowest p-3 rounded-[2.5rem] shadow-2xl flex flex-col gap-3">
+<!-- Priority Selector Tabs -->
+<div class="flex items-center gap-2 px-2 overflow-x-auto no-scrollbar">
+<button class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-container-low hover:bg-emerald-100 transition-colors" style="">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<span class="text-[10px] font-bold uppercase text-primary" style="">Info</span>
+</button>
+<button class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-container-low hover:bg-amber-100 transition-colors" style="">
+<span class="w-2 h-2 rounded-full bg-amber-500"></span>
+<span class="text-[10px] font-bold uppercase text-on-surface-variant" style="">Alert</span>
+</button>
+<button class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-tertiary/10 hover:bg-tertiary/20 transition-colors" style="">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="text-[10px] font-bold uppercase text-tertiary" style="">SOS</span>
+</button>
+<div class="flex-grow"></div>
+<button class="material-symbols-outlined text-on-surface-variant p-1" data-icon="attachment" style="">attachment</button>
+<button class="material-symbols-outlined text-on-surface-variant p-1" data-icon="location_on" style="">location_on</button>
+</div>
+<!-- Text Input -->
+<div class="relative flex items-center">
+<textarea class="w-full bg-surface-container-low border-none focus:ring-2 focus:ring-primary/20 rounded-2xl py-4 pl-6 pr-14 text-sm resize-none placeholder:text-outline" placeholder="Type a message to the mesh..." rows="1"></textarea>
+<button class="absolute right-2 w-10 h-10 bg-primary text-on-primary rounded-xl flex items-center justify-center active:scale-90 transition-transform" style="">
+<span class="material-symbols-outlined" data-icon="send" style="">send</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Optional Detail Context (Bento Style Sub-Module) -->
+<div class="hidden lg:block fixed right-8 top-24 w-80 space-y-6">
+<div class="bg-surface-container-low p-6 rounded-[2rem] shadow-sm">
+<h3 class="text-sm font-bold text-primary mb-4 flex items-center gap-2" style="">
+<span class="material-symbols-outlined text-sm" data-icon="insights" style="">insights</span>
+            Network Analytics
+        </h3>
+<div class="space-y-4">
+<div class="bg-surface-container-lowest p-4 rounded-2xl">
+<p class="text-[10px] text-outline font-bold uppercase tracking-widest" style="">Active Relay Nodes</p>
+<p class="text-2xl font-bold text-primary" style="">12</p>
+<div class="w-full bg-surface-container-high h-1 rounded-full mt-2">
+<div class="bg-primary w-3/4 h-1 rounded-full"></div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-2xl">
+<p class="text-[10px] text-outline font-bold uppercase tracking-widest" style="">Message Latency</p>
+<p class="text-2xl font-bold text-primary" style="">1.2s</p>
+<p class="text-[10px] text-secondary mt-1 font-medium" style="">Optimal Connection</p>
+</div>
+</div>
+</div>
+<div class="bg-primary p-6 rounded-[2rem] text-on-primary">
+<h3 class="text-sm font-bold mb-3" style="">Mesh Safety Tip</h3>
+<p class="text-xs opacity-90 leading-relaxed" style="">During high network traffic, SOS messages take priority and are automatically relayed first across all available nodes.</p>
+</div>
+</div>
+</body></html>

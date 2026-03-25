@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RescueLink Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed": "#c8ebd5",
+              "on-tertiary": "#ffffff",
+              "on-error": "#ffffff",
+              "on-background": "#181d1b",
+              "primary": "#163426",
+              "secondary-container": "#c2e9c9",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-low": "#f1f5f2",
+              "on-secondary-fixed": "#00210e",
+              "inverse-on-surface": "#eef2ef",
+              "on-primary-container": "#99baa6",
+              "primary-fixed-dim": "#adceb9",
+              "tertiary-fixed-dim": "#ffb3ac",
+              "surface-container": "#ebefec",
+              "on-secondary-container": "#486a51",
+              "on-tertiary-container": "#ff958c",
+              "tertiary": "#650007",
+              "surface": "#f6faf7",
+              "background": "#f6faf7",
+              "on-error-container": "#93000a",
+              "outline": "#727973",
+              "secondary": "#43664d",
+              "surface-container-high": "#e5e9e6",
+              "tertiary-container": "#8f000f",
+              "secondary-fixed": "#c5eccc",
+              "error-container": "#ffdad6",
+              "on-tertiary-fixed-variant": "#930010",
+              "on-surface-variant": "#424844",
+              "surface-dim": "#d7dbd8",
+              "on-primary-fixed-variant": "#2f4d3d",
+              "on-secondary-fixed-variant": "#2c4e36",
+              "inverse-primary": "#adceb9",
+              "on-primary-fixed": "#022113",
+              "secondary-fixed-dim": "#aad0b1",
+              "on-tertiary-fixed": "#410003",
+              "inverse-surface": "#2d3130",
+              "tertiary-fixed": "#ffdad6",
+              "on-surface": "#181d1b",
+              "surface-bright": "#f6faf7",
+              "outline-variant": "#c2c8c2",
+              "primary-container": "#2d4b3b",
+              "surface-variant": "#dfe3e1",
+              "on-secondary": "#ffffff",
+              "on-primary": "#ffffff",
+              "surface-tint": "#466554",
+              "surface-container-highest": "#dfe3e1",
+              "error": "#ba1a1a"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 px-6 py-4 flex items-center justify-between">
+<div class="flex-1 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary dark:text-emerald-400" data-icon="signal_cellular_alt">signal_cellular_alt</span>
+<h1 class="font-display font-extrabold text-xl tracking-tight text-primary dark:text-emerald-50 italic">RescueLink</h1>
+</div>
+<div class="flex-1 flex justify-end items-center">
+<div class="flex items-center gap-2 bg-emerald-50 dark:bg-emerald-950/30 px-3 py-1.5 rounded-full border border-emerald-100/50 dark:border-emerald-800/30">
+<div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
+<span class="text-[10px] font-bold uppercase tracking-wider text-emerald-800 dark:text-emerald-300">Mesh Active</span>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-36 px-4 max-w-4xl mx-auto space-y-8">
+<!-- Connection Status & Hero Map Cluster -->
+<section class="relative">
+<div class="w-full h-48 rounded-[2rem] overflow-hidden bg-surface-container-low mb-[-4rem] relative">
+<img alt="Topographic mesh map" class="w-full h-full object-cover opacity-50" data-alt="Abstract minimalist topographic map in muted sage and grey tones showing connectivity mesh nodes and signal waves" data-location="San Francisco" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVrrv6ddm_7psTZlPZerPzn9fZUIM8ak-jH05_wcqtwQmsESn4xtqu_yztPaJZeoa-pQ6Zx2MhCMAqkIFucaG6Zs7abJkFYWUcW1gN4DN5NtGhEgdDOuHYz2ldYJHWIv89zm8s9riunuDbnQgtkQAEKDjnsooPuZdOdvfc6WHoIYmJjzMH3MY-Ca8zBw6fq0b3EyjeF5g4YkjiokSuD_6M8s2m3HcNy6HjFNj9eryyR_OtvzuyVECk504XUrp1uN0QLYIvZfkX8A"/>
+</div>
+<div class="relative z-10 px-4">
+<div class="glass-card rounded-[2rem] p-6 shadow-sm border border-white/20">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary-fixed text-primary">
+<span class="material-symbols-outlined" data-icon="hub" style="font-variation-settings: 'FILL' 1;">hub</span>
+</div>
+<div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-100 text-emerald-900 rounded-full text-xs font-semibold mb-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                                    Connected to Mesh
+                                </div>
+<h2 class="font-headline font-bold text-xl">8 nearby nodes active</h2>
+</div>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant text-sm font-medium bg-surface-container-low px-4 py-2 rounded-xl">
+<span class="material-symbols-outlined text-sm" data-icon="battery_full">battery_full</span>
+                            84% Power
+                        </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Actions Panel -->
+<section class="grid grid-cols-2 md:grid-cols-4 gap-4 px-2">
+<button class="group flex flex-col items-center justify-center p-6 bg-tertiary text-on-tertiary rounded-[2rem] shadow-lg hover:brightness-110 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-3xl mb-2" data-icon="emergency" style="font-variation-settings: 'FILL' 1;">emergency</span>
+<span class="font-label text-xs uppercase tracking-widest font-bold">Send SOS</span>
+</button>
+<button class="group flex flex-col items-center justify-center p-6 bg-primary text-on-primary rounded-[2rem] shadow-sm hover:brightness-110 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-3xl mb-2" data-icon="settings_input_antenna">settings_input_antenna</span>
+<span class="font-label text-xs uppercase tracking-widest font-bold">Broadcast</span>
+</button>
+<button class="group flex flex-col items-center justify-center p-6 bg-surface-container-highest text-on-surface rounded-[2rem] shadow-sm hover:bg-surface-container-high active:scale-95 transition-all">
+<span class="material-symbols-outlined text-3xl mb-2" data-icon="location_on" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<span class="font-label text-xs uppercase tracking-widest font-bold">Share Location</span>
+</button>
+<button class="group flex flex-col items-center justify-center p-6 bg-surface-container-highest text-on-surface rounded-[2rem] shadow-sm hover:bg-surface-container-high active:scale-95 transition-all">
+<span class="material-symbols-outlined text-3xl mb-2" data-icon="helicopter">helicopter</span>
+<span class="font-label text-xs uppercase tracking-widest font-bold">Signal Drone</span>
+</button>
+</section>
+<!-- Bento Layout: Nearby & Community -->
+<section class="grid grid-cols-1 md:grid-cols-5 gap-6">
+<!-- Nearby Devices List -->
+<div class="md:col-span-3 bg-surface-container-low rounded-[2.5rem] p-8">
+<div class="flex items-center justify-between mb-6">
+<h3 class="font-headline font-bold text-lg">Nearby Devices</h3>
+<span class="text-xs font-bold text-primary bg-primary-fixed px-3 py-1 rounded-full uppercase tracking-tighter">Real-time</span>
+</div>
+<div class="space-y-4">
+<!-- Device 1 -->
+<div class="flex items-center justify-between p-4 bg-surface-container-lowest rounded-2xl shadow-sm">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-emerald-100 text-emerald-800 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="smartphone">smartphone</span>
+</div>
+<div>
+<p class="font-bold text-sm">Sierra_Alpha_02</p>
+<p class="text-xs text-on-surface-variant">Active 2m ago</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-sm font-bold text-primary">~140m</p>
+<p class="text-[10px] text-on-surface-variant uppercase font-medium">1 Hop</p>
+</div>
+</div>
+<!-- Device 2 -->
+<div class="flex items-center justify-between p-4 bg-surface-container-lowest rounded-2xl shadow-sm">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-emerald-100 text-emerald-800 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="router">router</span>
+</div>
+<div>
+<p class="font-bold text-sm">Base_Repeater_East</p>
+<p class="text-xs text-on-surface-variant">Stationary</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-sm font-bold text-primary">~850m</p>
+<p class="text-[10px] text-on-surface-variant uppercase font-medium">Direct</p>
+</div>
+</div>
+<!-- Device 3 -->
+<div class="flex items-center justify-between p-4 bg-surface-container-lowest rounded-2xl shadow-sm opacity-80">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-emerald-100 text-emerald-800 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="person_pin">person_pin</span>
+</div>
+<div>
+<p class="font-bold text-sm">Mobile_Unit_K9</p>
+<p class="text-xs text-on-surface-variant">Active 12m ago</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-sm font-bold text-primary">~1.2km</p>
+<p class="text-[10px] text-on-surface-variant uppercase font-medium">3 Hops</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Community Chat Preview -->
+<div class="md:col-span-2 bg-primary rounded-[2.5rem] p-8 text-on-primary relative overflow-hidden flex flex-col">
+<div class="relative z-10 mb-8">
+<h3 class="font-headline font-bold text-lg mb-2">Community Chat</h3>
+<p class="text-emerald-200/70 text-sm">Local mesh channels active in your sector.</p>
+</div>
+<div class="relative z-10 flex-grow space-y-4">
+<div class="bg-primary-container/30 p-4 rounded-2xl border border-white/5">
+<div class="flex items-center gap-2 mb-2">
+<div class="w-6 h-6 rounded-full bg-emerald-300 text-emerald-950 text-[10px] flex items-center justify-center font-bold">JD</div>
+<span class="text-xs font-bold text-emerald-100">John Doe</span>
+<span class="text-[10px] text-emerald-300/60 ml-auto">12:45</span>
+</div>
+<p class="text-sm text-emerald-50/90 leading-snug">Main ridge trail clear of debris. Mesh strength 4/5.</p>
+</div>
+<div class="bg-primary-container/30 p-4 rounded-2xl border border-white/5">
+<div class="flex items-center gap-2 mb-2">
+<div class="w-6 h-6 rounded-full bg-emerald-200 text-emerald-950 text-[10px] flex items-center justify-center font-bold">HQ</div>
+<span class="text-xs font-bold text-emerald-100">Rescue HQ</span>
+<span class="text-[10px] text-emerald-300/60 ml-auto">12:42</span>
+</div>
+<p class="text-sm text-emerald-50/90 leading-snug">Weather update: Low clouds expected at 14:00.</p>
+</div>
+</div>
+<div class="relative z-10 mt-6 pt-4 border-t border-white/10">
+<div class="flex items-center gap-3">
+<div class="flex-grow h-10 bg-white/10 rounded-full flex items-center px-4 text-xs text-emerald-100/50">
+                            Type a message...
+                        </div>
+<button class="w-10 h-10 bg-emerald-200 text-emerald-950 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-sm" data-icon="send">send</span>
+</button>
+</div>
+</div>
+<!-- Abstract Decorative Gradient -->
+<div class="absolute top-0 right-0 w-32 h-32 bg-emerald-400/10 blur-3xl rounded-full"></div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar (Updated to shared component {{DATA:COMPONENTS:COMPONENTS_12}}) -->
+<nav class="fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-md bg-[#181d1b] dark:bg-black rounded-[2rem] z-50 shadow-[0_32px_64px_-15px_rgba(24,29,27,0.2)]">
+<div class="flex justify-around items-center p-2">
+<!-- Active: Dashboard -->
+<a class="flex flex-col items-center justify-center bg-[#2D4B3B] text-[#c8ebd5] rounded-xl px-6 py-2 transition-all active:scale-90 duration-300" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="font-inter text-[10px] font-medium tracking-wide">Dashboard</span>
+</a>
+<!-- Inactive: SOS -->
+<a class="flex flex-col items-center justify-center text-gray-400 px-6 py-2 hover:text-white transition-opacity active:scale-90 duration-300" href="#">
+<span class="material-symbols-outlined">emergency</span>
+<span class="font-inter text-[10px] font-medium tracking-wide">SOS</span>
+</a>
+<!-- Inactive: Settings -->
+<a class="flex flex-col items-center justify-center text-gray-400 px-6 py-2 hover:text-white transition-opacity active:scale-90 duration-300" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-inter text-[10px] font-medium tracking-wide">Settings</span>
+</a>
+</div>
+</nav>
+</body></html>
